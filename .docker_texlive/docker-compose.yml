@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  tex-ja:
+    restart: always
+    image: ichiharanaruki/tex-ja:latest
+    environment:
+      SHELL: "/bin/bash"
+    command: sleep infinity
+    volumes:
+      - ../:/workdir
+      - ../.latexmkrc:/root/.latexmkrc
